@@ -1,0 +1,374 @@
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MontserratBold';
+    src: url('font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'MontserratBlack';
+    src: url('font/Montserrat-Black.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MontserratRegular', Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    background-image: url('image/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #111;
+    padding: 22px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    transition: all 0.5s ease;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #828282;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.welcome-section {
+    margin-top: 0;
+}
+
+.welcome-background {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    min-height: calc(100vh - 0px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-content h1 {
+    font-family: 'MontserratBold';
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease;
+}
+
+.welcome-content p {
+    font-family: 'MontserratRegular';
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+.services-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.section-title-service {
+    font-family: 'MontserratBold';
+    font-size: 34px;
+    color: #fff;
+    padding-top: 70px;
+}
+
+.section-text-service {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 7px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.service-card {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    border: 2px solid #333;
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #3b3b3b;
+}
+
+.card-content {
+    padding: 15px;
+    
+}
+
+.service-card h2 {
+    font-family: 'MontserratRegular';
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+
+.about-section{   
+    max-width: 1000px;
+    margin: 300px auto;
+    padding: 40px 30px;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.section-title-about {
+    font-family: 'MontserratBold';
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-text-about {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    max-width: 800px;
+    margin: 200px auto;
+    padding: 40px 30px;
+    background-color: rgba(34, 34, 34, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.section-title-contact {
+    font-family: 'MontserratBold';
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-text-contact {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-section a {
+  color: #fff;
+  margin-left: 5px;
+}
+
+footer {
+    background-color: #111;
+    padding: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.cta-btn {
+    padding: 12px 28px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'MontserratRegular';
+}
+
+.cta-btn:hover {
+    background-color: #666;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+    .service-card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .welcome-content h1 {
+        font-size: 36px;
+    }
+
+    .welcome-content p {
+        font-size: 16px;
+    }
+
+    .service-card {
+        width: 250px;
+    }
+
+    .about-section,
+    .contact-section {
+        margin: 80px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-content h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .service-card img {
+        height: 150px;
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
